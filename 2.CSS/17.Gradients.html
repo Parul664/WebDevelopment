@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gradients </title>
+    <style>
+        .bluebox{
+/*            background-color : blue;*/
+/*            color : white;*/
+            height : 100px;
+            width : auto;
+/*            Linear or Radial Gradient*/
+/*            Linear - Standard Syntax*/
+            background: linear-gradient(blue, white);
+/*            For some browsers we need to duplicate this line with this written*/
+/*            For Safari add this extra line*/
+/*            background: -webkit-linear-gradient(blue, white);*/
+/*            For FireFox add this extra line*/
+/*            background: -fox-linear-gradient(blue, white);*/
+        }
+        .yellowbox{
+/*            background-color: rgb(222,224,85);*/
+            height: 100px;
+            width : auto;
+/*          More colours can be added if you like*/
+            background: linear-gradient(to left, blue,white,yellow);
+                
+/*            background: linear-gradient(to bottom left, blue,white,yellow)*/
+/*            OR by degree anticlockwise*/
+/*            background: linear-gradient(90deg, blue, white, yellow)*/
+        }
+        .greenbox{
+            height: 100px;
+            width : auto;
+/*            Radial Gradient*/
+/*            background: radial-gradient(blue, white, yellow);*/
+/*            Normally we'll get elliptical shape, Add circle in the front to get a circlular gradient.*/
+            background: radial-gradient(circle, blue 5%, white 25%, yellow 70%);
+        }
+        
+    
+    </style>
+    
+    </head>
+    
+    <body>
+        
+    <div class = "bluebox">
+    <p>Facebook</p>        
+    </div>
+        
+    <div class = "yellowbox">
+    <p>Apple</p>        
+    </div>
+        
+    <div class = "greenbox">        
+    <p>Microsoft</p>        
+    </div>
+        
+        
+    <p>Gradients mean that we are creating some kind of smooth transition between colours. Gives nice and professional look. <br />
+    BGR here. <br />
+    We can also change the opacity of the colour by providing a 4 tuple value, (B,G,R, Opcity b/w 0 and 1)
+    
+        </p>
+    
+    </body>
+
+
+
+
+</html>

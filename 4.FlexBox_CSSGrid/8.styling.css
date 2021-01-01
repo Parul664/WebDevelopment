@@ -1,0 +1,25 @@
+form{
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    padding 20px;
+    display: grid;
+    grid-gap : 5px;
+    grid-template-columns: [label]auto [input]1fr;
+/* We can name the columns, with names inside the braces.   */
+}
+
+form > label{
+    background-color: greenyellow;
+    grid-column: label;
+}
+
+form > input{
+    font-size: 1em;
+    grid-column: input;
+/*    The input should always occupy the first column with the name that we gave to it as input*/
+}
+
+form > input[type = "submit"]{
+    grid-column: span 2;
+/*    Make it span over 2 columns.*/
+}

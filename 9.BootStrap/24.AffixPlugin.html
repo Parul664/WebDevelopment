@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Carousel </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        ul.nav-tabs{
+             width: auto;
+             border: 1px solid #9e60f0;
+             border-radius: 3px;
+         }
+         ul.nav-tabs li.active a, ul.nav-tabs li.active
+        a:hover{
+             color: white;
+             background: #7628dc;
+         }
+        
+        #myaffix{
+            position:fixed;
+        }
+        
+    </style>
+</head>
+    
+    
+ <body data-spy="scroll" data-target="#myscrollspy">
+     <div class="container-fluid">
+
+         <div class="row">
+             
+<!--            Division of nav bar-->
+            <div class="col-xs-3" id="myscrollspy">
+             
+<!--                Affix-top will make it go to the topmost position, when you scroll down-->
+                <ul id=myaffix class="nav nav-tabs nav-stacked" data-spy="affix-top">
+                    <li><a href="#section1">Section 1</a></li>
+                    <li><a href="#section2">Section 2</a></li>
+                    <li ><a href="#section3">Section 3</a></li>
+                    <li ><a href="#section4">Section 4</a></li>
+                    <li ><a href="#section5">Section 5</a></li>
+                                    
+                </ul>
+             
+            </div>
+<!--             The right side that holds the content-->
+            <div class="col-xs-9">
+                <h2 id="section1">Section 1</h2>
+                <p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p><p>C1</p>
+                
+                <h2 id="section2">Section 2</h2>
+                <p>C2</p><p>C2</p><p>C2</p><p>C2</p>
+                <p>C2</p><p>C2</p><p>C2</p><p>C2</p>
+                <p>C2</p><p>C2</p><p>C2</p><p>C2</p>
+                <p>C2</p><p>C2</p><p>C2</p><p>C2</p>
+                <p>C2</p><p>C2</p><p>C2</p><p>C2</p>
+                
+                <h2 id="section3">Section 3</h2>
+                <p>C3</p><p>C3</p><p>C3</p><p>C3</p>
+                <p>C3</p><p>C3</p><p>C3</p><p>C3</p>
+                <p>C3</p><p>C3</p><p>C3</p><p>C3</p>
+                <p>C3</p><p>C3</p><p>C3</p><p>C3</p>
+                <p>C3</p><p>C3</p><p>C3</p><p>C3</p>
+                
+                <h2 id="section4">Section 4</h2>
+                <p>C4</p><p>C4</p><p>C4</p><p>C4</p>
+                <p>C4</p><p>C4</p><p>C4</p><p>C4</p>
+                <p>C4</p><p>C4</p><p>C4</p><p>C4</p>
+                <p>C4</p><p>C4</p><p>C4</p><p>C4</p>
+                
+                <h2 id="section5">Section 5</h2>
+                <p>C5</p><p>C5</p><p>C5</p><p>C5</p>
+                <p>C5</p><p>C5</p><p>C5</p><p>C5</p>
+                <p>C5</p><p>C5</p><p>C5</p><p>C5</p>
+                <p>C5</p><p>C5</p><p>C5</p><p>C5</p>
+             
+            </div>
+         
+         </div>
+         
+     </div>
+
+     
+     <script    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+     <script src="js/bootstrap.min.js"> </script> 
+     
+     
+     
+ </body>
+</html>
+

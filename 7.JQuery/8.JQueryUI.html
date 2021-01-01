@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQuery UI</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+<!--    Above script is so that we can use JQuery UI-->
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+        
+    <div>
+    <p class = "ui-state-error" style="height:100px;margin-top:20px">Error message!</p>  
+<!--https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css. You can change the theme using this link, after the them, it is written blitzer, change it to whatever you like, You can see it on this website: jqueryui.com-->
+        
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#facebook").draggable();
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+<!--We can add some istant styling by adding that JQuery UI class to that div, and it will give it that styling.-->

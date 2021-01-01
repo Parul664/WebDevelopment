@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Drawing App </title>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/start/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    
+    <link href="5.styling.css" rel="stylesheet">
+    
+</head>
+    
+    
+ <body>
+     
+<!--     title-->
+     <div id="header">
+        Drawing App
+     </div>
+     
+<!--     Input-->
+     <div class="inputContainer">
+<!--        Color input-->
+         <div class="input" id="colorInput">
+            <input type="color" list id="paintColor">
+         </div>
+         
+<!--         Size input-->
+<!--         The circle-->
+         <div class="input" id="thicknessInput">
+            <div id="circle"></div>
+         </div>
+         
+<!--         Slider-->
+         <div class="input">
+             
+            <div id="slider"></div>
+         </div>
+         
+     </div>
+     
+<!--     Canvas Container-->
+     <div id=container>
+        <canvas id="paint" width="500px" height="400px"></canvas>
+     </div>
+     
+<!--     Buttons at the bottom-->
+     <div class="inputContainer2">
+<!--            erase button-->
+         <div class="input2">
+            <span id="erase" class="button">Erase</span>
+         </div>
+         
+<!--         Save-->
+         <div class="input2">
+            <span id="save" class="button">Save</span>
+         </div>
+         
+<!--         Reset-->
+         <div class="input2">
+            <span id="reset" class="button">Reset</span>
+         </div>
+     
+     </div>
+     
+     <script src="5.jquery.js"></script>
+     
+ </body>
+</html>
+

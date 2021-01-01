@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Changing style</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+    
+    </style>
+    <script src = "js/jquery.js"></script>
+    
+    </head>
+    
+    
+    <body>
+    
+    
+<!--    buttons-->
+    <button id = changefacebook> Change Facebook</button>
+    <button id = changeapple> Change Apple</button>
+    <button id = changemicrosoft> Change Microsoft</button>
+    <button id = showmicrosoft> Show Microsoft</button>
+    <button id = changegreat> change great</button>
+        
+    <div class = "bluebox"><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox sans"><p>Apple</p> </div>
+        
+    <div class = "greenbox"><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+        
+    <p>Enter your name: <input></p>
+        
+
+
+    
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#changefacebook").click(function(){
+//            $(".bluebox").css("width",'300px');
+            //$(".bluebox").css("width",300); also works
+            $(".bluebox").css("width",100*Math.random()-50+ $(".bluebox").width());
+            
+            $(".bluebox").addClass("greenbox");
+            // We are adding a class to bluebox. If we do this everything except the width will change, since the width is set using the javascript code, it is not going to change,
+            
+            // inner-height : height including padding
+//            window.alert($(".bluebox").innerHeight() );
+            window.alert($(".bluebox").outerHeight() );
+            // This is also 100 since we donot have any border.
+            
+        });
+        
+        $("#changeapple").click(function(){   
+            $(".yellowbox").removeClass("sans");
+        });        
+        //You can perform the same function by clicking on the apple div, just use .yellowbox onclick function
+        
+        $(".yellowbox").click(function(){   
+            $(".yellowbox").css("position","absolute");
+            $(".yellowbox").css({'top':Math.random()*200, 'left':Math.random()*200, 'background-color': 'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')'});
+        });
+        
+        $("#changemicrosoft").click(function(){
+            $(".greenbox").toggle("greenbox");
+            // a class as parameter. Toggles between class greenbox and none
+        });
+        $(".greenbox").dblclick(function(){
+            $(this).hide();
+            // same as display : none;
+        })
+        $("#showmicrosoft").click(function(){
+            $(".greenbox").show();
+        })
+        
+        // wrapping a span/ or something else within divs
+        $("#changegreat").click(function(){
+            $(".great").wrap("<div></div>");
+        })
+        
+        
+    })
+        
+    </script>
+        
+    </body>
+
+
+
+
+</html>

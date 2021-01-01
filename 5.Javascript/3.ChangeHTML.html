@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Change HTML content</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+    
+    <p>Divisions are used for grouping a bunch of paragraphs together.</p>
+        
+    <div class = "bluebox" id = "facebook">
+    <p>Facebook</p>        
+    </div>
+        
+    <div class = "yellowbox" id = "apple">
+    <p>Apple</p>        
+    </div>
+        
+    <div class = "greenbox">        
+    <p>Microsoft</p>        
+    </div>
+        
+        
+    <button id = "button1">Change Facebook Content</button>
+    <button id = "button2">Change Apple Content</button>
+    <script>
+        
+        document.getElementById("button1").onclick = function(){
+            document.getElementById("facebook").innerHTML = "<p> Changed content of Facbook</p>";
+        }
+        document.getElementById("button2").ondblclick = function(){
+            document.getElementById("apple").innerHTML = "<ul><li> Apple</li><li>Tomato</li><li>Banana</li></ul>"
+        } 
+    </script>
+    
+    </body>
+
+
+
+
+</html>

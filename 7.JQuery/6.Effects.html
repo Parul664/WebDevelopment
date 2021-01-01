@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Effects</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+    
+    </style>
+    <script src = "js/jquery.js"></script>
+    
+    </head>
+    
+    
+    <body>
+    
+    
+<!--    buttons-->
+    <button id = fadefacebook> FadeOut Facebook</button>
+    <button id = fadeinfacebook> Fadein Facebook</button>
+    <button id = fadetogglefacebook> FadeToggle Facebook</button>
+    <button id = animate> animate</button>
+        
+    <div class = "bluebox" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox sans" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+        
+    <p>Enter your name: <input></p>
+        
+
+
+    
+        
+    <script>
+       
+    $(document).ready(function(){
+        
+        $("#fadefacebook").click(function(){
+            // $("#facebook").fadeOut();
+            // exactly the same as display : none
+//            $("#facebook").fadeOut("fast");
+//            $("#facebook").fadeOut(3000);
+            // fades in 300ms;
+            // we can also define a function that tells browser what happens if it has faded out.
+            $("#facebook").fadeOut(3000, function(){
+                window.alert("I have completely faded out !");
+            });
+            
+        });
+        
+         $("#fadeinfacebook").click(function(){
+            
+            $("#facebook").fadeIn(3000, function(){
+                window.alert("I have completely faded in !");
+            });
+            
+        });
+        $("#fadetogglefacebook").click(function(){
+            
+            $("#facebook").fadeToggle(3000);
+            
+            
+        });
+        $("#animate").click(function(){
+//            $("#facebook").animate({width:'200px', height:'50px',opacity:0.5},1000);
+            $("#facebook").animate({width:'400px'},1000);
+            $("#facebook").animate({height:'300px'},1000);
+            $("#facebook").delay(1000).animate({height:'200px'},1000);
+            $("#facebook").animate({width:'200px'},1000);
+        })
+    })
+        
+    </script>
+        
+    </body>
+
+
+
+
+</html>

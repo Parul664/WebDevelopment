@@ -1,0 +1,51 @@
+.container > div {
+    background-color: #66a5AD;
+    color : aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding : 5px;
+/*    margin : 2px;*/
+}
+
+.container{
+    background-color: black;
+/*    Turing the container to a grid*/
+    display: grid;
+    
+/*    dimension for rows and columns*/
+/*    Grid with 4 rows and 4 columns*/
+/*    row height*/
+    grid-template-rows: 30px 30px 30px 30px;
+/*    Here if you replace 30px by 1fr then no effect, since we havent as of now explicitely told the height of the container.*/
+    
+/*    column width*/
+/*    grid-template-columns: 100px 100px 100px 100px;*/
+/*    Alternate : It gives 1 quarter of free space to the each column*/
+/*    grid-template-columns: 1fr 1fr 1fr 3fr;*/
+/*    Alternative */
+/*    grid-template-columns: 25% 1fr 1fr 3fr*/
+/*    grid-template-columns: repeat(4, 1fr)*/
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    
+/*    gutter*/
+    grid-gap: 5px;
+    padding : 7px;
+}
+
+/*minmax(300px,1fr)
+Means that it will give 1fr of free space to each of them but it must not be less than 300px;
+If we do 400px then it exceeds out of the grid.
+So we use auto-fill instead od explicitely mentioning, 300px it will autofill the grid with=howmany-ever columns it wants.
+*/
+
+/*If we have got a few items for example only 2, then it will break it into 4 columns, with 1fr and put 2 items in the first 2 columns and rest of the space is left empty. In that case we use auto-fit instead of auto-fill, where the remaining space is occupied by before inserted items.*/
+
+/*If you add more rows such that they cannot fit themselves in the mentioned number of rows then the left part of the grid is known as the implicit grid. The other part is called the explicit grid.*/
+
+/*If rows = repeat(4,1fr). The the minimum need space will be given to the implicit rows and the leftover space will be distributed for the explicit rows. However, if we mention in pixels then the mentioned amont of space will be provided. The row-width for the implicit columns can be set using */
+/*grid-auto-rows : 70px;(say)*/
+/*it by default grows the columns, suppose we want to grow the rows instead 
+*/
+/*grid-auto-flow : column;*/
+/*Sam as above minimum width will be given. We can set it using*/
+/*grid-auto-columns : 70px;*/

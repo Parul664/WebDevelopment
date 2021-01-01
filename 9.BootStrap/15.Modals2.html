@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Modals </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+    
+    
+ <body>
+     <div class="container-fluid">
+
+         <button type="button" class="btn btn-primary" data-target="#myInquiry" data-toggle="modal" data-ordernumber="1122">Order Number : 1122 - Contact us</button>
+         
+<!--         This is the full modal box-->
+         <div class="modal" id="myInquiry" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+<!--                Wraps the content inside the header-->
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+<!--                        A button with data-dismiss=modal will close all the model attributes-->
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="myModalLabel">Thank you for contacting us.</h4>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <label for ="inquiry">Your Inquiry</label>
+                        <textarea class="form-control" rows="5" id="inquiry">
+                        
+                        </textarea>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Send</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div> 
+            </div>
+         
+         </div>
+         
+     </div>
+
+     
+     <script    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+     <script src="js/bootstrap.min.js"> </script>
+     
+     <script>
+     
+         $("#myInquiry").on("show.bs.modal", function(event){
+             
+//             Button that trigerred the modal
+             var button = $(event.relatedTarget);
+             
+//             get the data-ordernumber attribute from the button
+             var orderNumber = button.data('ordernumber');
+             window.alert(orderNumber);
+             
+             $(this).find("#myModalLabel").text('Order number: '+orderNumber);
+             
+         })
+     </script>
+     
+ </body>
+</html>
+
+<!--Modal is like when you click on the screen you get a pop uo kind of thing-->
+<!--role is for assistive technologies, when this dialog becomes visible it will speak the label for this!-->
+<!--aria-labelledby usually acess the modal header, and is linked by the id of the modal header.-->
+
+<!--shown.bs.modal is when the modal shows up.
+    show.bs.modal performs the action even before the modal is loaded.
+    hidden.bs.model preforms the action when modal is completly hidden
+    hide.bs.model does when the we click on the close button because it calls the hide instance.
+-->

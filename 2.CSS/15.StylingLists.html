@@ -1,0 +1,58 @@
+<DOCTYPE html>
+<html>
+<meta charset="utf-8">
+    <title>Styling Lists</title>
+    
+    
+<style>
+/* This is one way of styling the list */
+    ul.list1{
+        font-size: 3ex;
+        list-style: lower-roman;
+/*        list-style-image: url(images/Blue_Square.svg.png);*/
+        
+    }
+    
+    
+    ul.list2{
+        font-size: 5ex;
+/*        Removes the list item Markers*/
+        list-style: none;
+/*        Remove padding . the right alignment because of the bullet points*/
+        padding : 0;
+        margin : 0;
+    }
+/*    We want to style the list items*/
+    ul.list2 li{
+        background-size: 100% 100%;
+        background-image: url(images/Graph_image.png);
+        background-repeat: no-repeat;
+        background-position: 0px center;
+        padding-left: 30px;
+/*    Image appears 3 times because there are 3 elements in the list*/
+    }
+    
+</style>
+</html>
+    
+<body>
+<p>
+A list containing the name of family member of Parul's Family.    
+</p>    
+    
+<ul class = "list1">
+    <li> Ranbir</li>
+    <li> Prateek</li>
+    <li> Manju</li>
+</ul>
+   
+<p>List number 2 containing the same items as above. </p>
+<ul class = "list2">
+    <li> Ranbir</li>
+    <li> Prateek</li>
+    <li> Manju</li>
+</ul>
+</body>
+    
+
+</DOCTYPE>

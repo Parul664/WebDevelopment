@@ -1,0 +1,131 @@
+/*Put some background color to clearly distinguish between the divs. As here we can see. Here some elements are divs and some are not. Like the Addresss div in all is not a flex blox. And shipping whole is also not a flex box. The inside elements of the Address are however flax items.*/
+
+*{
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+/*    We are taking the full height of the webpage. since form occupied full width of the page*/
+    padding: 10px;
+/*    Submit should always stick to the end of the page.*/
+    font-size : 24px;
+/*    Now whenever we refer to 1em, it will refer to 24px.*/
+}
+
+body, html{
+    margin : 0;
+    padding : 0;
+}
+
+input, textarea, select{
+    background-color: rgba(138, 230, 81, 0.7);
+    border-radius: 5px;
+}
+
+/*1. Container*/
+.container{
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+/*1.1 details*/
+.details {
+    background-color: greenyellow;
+    flex: 3;
+}
+
+/*1.1.1 Adreess*/
+.address .form-group{
+    display: flex;
+    margin : 1em;
+    
+}
+
+.address .form-group label{
+    flex : 1;
+    text-align : right;
+    margin-right: 1em;
+}
+.address .form-group input{
+    flex : 3;
+    font-size: 1em;
+}
+
+/*1.1.2. Shipping*/
+.shipping {
+    text-align: center;
+}
+.shipping select{
+    font-size : 1em;
+    margin-top : 0.5em;
+}
+
+/*1.1.3. Payment*/
+.payment{
+    text-align: center;
+    margin-top : 1em;
+}
+
+.payment div:nth-child(2){
+    display: flex;
+}
+.payment div:nth-child(2) label{
+    flex : 1;
+    margin-top : 0.5em;
+}
+
+/*1.1.4. Checks*/
+.checks{
+    display: flex;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.checks label{
+    flex: 1;
+}
+
+.checks label:nth-child(1){
+    order : 2;
+/*    Positioning the element*/
+}
+
+.checks label:nth-child(2){
+    order : 1;
+}
+
+/*1.2 Comments*/
+.comments{
+    background-color: deepskyblue;
+    flex: 1;
+/*    Used as a item of container */
+    display : flex;
+    flex-direction: column;
+    margin : 1em;
+}
+
+.comments textarea{
+    flex:1;
+/*    If you give flex property to one item and not to the other then it is going to take up any remaining space.*/
+}
+
+.submit{
+    background-color: darkred;
+    margin-top: auto;
+/*    A trick-can be used in another direction also.*/
+/*    The full above width will be used in margin as if there is some element above it. And hence the submit button will stick to the bottom of the page.*/
+    text-align: center;
+    
+}
+.submit button{
+    background-color: deepskyblue;
+    width : 100%;
+/*        So that it occupied the full width of its parents.*/
+    color : azure;
+    font-size : 1.7em;
+}
+

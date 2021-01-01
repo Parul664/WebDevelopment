@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    background-color : #07575B;
+    height : 300px;
+    margin : 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+/*    The elements are in the center all the time widthwise. They still stratch vertically.*/
+    justify-content: center;
+/*    flex-start: will align towards left*/
+/*    flex-end will alogn towards right*/
+/*    space-around equal spaces around row items.*/
+/*    space-between spaces only behine them. Not on sides*/
+/*    justify content pushes them from left and right to center them. If we now want that verticall also they must be in the middle then, align-items will work*/
+    align-items :center;
+}
+
+
+.container > div {
+    background-color: #66a5AD;
+    color : aliceblue;
+    text-align: center;
+    padding : 20px;
+    margin:1px;
+    border : 3px #C4DFE6 solid;
+}

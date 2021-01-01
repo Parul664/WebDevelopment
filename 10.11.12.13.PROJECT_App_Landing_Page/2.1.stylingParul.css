@@ -1,0 +1,97 @@
+.mainContainer{
+    background-image: url(images/picture.jpg);
+    background-size: 100% 100%;
+    height: auto;
+    background-attachment:fixed;
+    height: auto;
+}
+
+.jumbotron{
+    background: none;
+    color:white;
+    text-align: center;
+}
+
+.jumbotron h1{
+    font-size: 90px;
+    font-family: sans;
+}
+
+.navbar-brand img{
+    width:40px;
+}
+
+.navbar-inverse{
+    background: none;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+
+
+.navigation{
+    margin: 0 auto;
+    position: relative;
+    font-size: 18px; 
+    font-weight: 600;
+    font-family: sans;
+}
+
+.navbar{
+    border-radius: 0px;
+}
+.nav li{
+    margin-right: 60px;   
+}
+
+.nav li a{
+    padding: 20px;
+}
+
+
+.navbar-brand{
+    margin-right: 40px;
+}
+
+.image1{
+    width: 150px;
+} 
+
+.thumbnail{
+    background: none;
+    border: none;
+    width: 330px;
+}
+
+.caption{
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    
+}
+.caption h3{
+    font-weight: 700;
+    color: white;
+    font-family: sans;
+}
+.caption p{
+    color: white;
+    font-family: sans;
+}
+
+.buttonEnd{
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: rgba(200,255,200,0.4);
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.footer{
+    margin-top: 30px;
+    background-color: rgba(255,255,200,0.4);
+    padding: 5px;
+}

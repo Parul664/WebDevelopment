@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    background-color : #07575B;
+    height : 300px;
+    margin : 10px;
+    display: flex;
+/*    flex-wrap: wrap;*/
+    flex-direction: row;
+    justify-content: center;
+
+/*    Aligns tflex boxes with respect to each other*/
+    align-items :stretch;
+    align-content:flex-start;
+/*    Aligns flex lines with respect to each other*/
+}
+
+
+.container > div {
+    background-color: #66a5AD;
+    color : aliceblue;
+    text-align: center;
+    padding : 20px;
+    margin:1px;
+    border : 3px #C4DFE6 solid;
+    flex-grow: 1;
+/*    The elements are going to grow to fit the screen, as soon as the size of each reach a basis*/
+/*    If for some element of this div, I set the flew-grow as more than one, then the additional space that is going to be created will be distributed between all the divs with more space given to say Apple(whichever is set to have more flax-growth)*/
+    flex-basis: 200px; 
+/*    Here the basis is set to 100px meaning that after the size of the div reached 100px, then it will grow from there on.*/
+/*    We can see that as soon as they reach the flex-basis a new line is created. If we dont want that and want them to shrink further to their minimum length, we can set*/
+    flex-shrink: 1;
+}
+
+/*As soon as you specify the flex grow property of a element, then your elements wil occupy all the available space.*/
+/*Flex basis by default is the minmum space that is required to fit an item.
+These 3 properties can be together be set as flex-grow flex-shrink flex-basis
+as flex: 1 1 150px
+
+*/

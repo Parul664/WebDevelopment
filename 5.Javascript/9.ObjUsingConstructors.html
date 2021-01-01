@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Objects Constructors</title>
+        
+</head>
+<body>
+    <p> Javascript</p>
+    
+
+    <script>
+    
+        function phone (make, model, warranty, color){
+//            Object in question
+            this.make = make;
+            this.model = model;
+            this.warranty = warranty;
+            this.color = color;
+            
+//            Adding methods
+            this.extendWarranty = function (x){
+                this.warranty += x;
+            }
+        }
+        
+        var myPhone = new phone("Apple","Iphone XS", 12, "white");
+        
+        window.console.log(myPhone);
+//        Identified by the constructor phone that we used for making this object.
+        
+        myPhone.extendWarranty(12);
+        window.console.log(myPhone.warranty);
+        
+        myPhone.condition = "like new";
+        window.console.log(myPhone); // As of now we dont see this property when we print but if we try to print this property, it will print
+        window.console.log(myPhone.condition);
+//        This will work
+        
+        
+        var MyBrothersPhone = new phone("Apple","Iphone XR", 10, "black");
+        window.console.log(MyBrothersPhone.condition);
+        // This is undefined
+        
+//        So if we want to add one more property to the protoype we use. Generalising to all the ojects of that prototype
+        phone.prototype.condition = "new"; // by default value is new.
+        window.console.log(MyBrothersPhone.condition);
+        //now it will be se to "new"
+        window.console.log(myPhone.condition);
+        // This is still new
+        
+    </script>
+    
+</body>
+
+</html>

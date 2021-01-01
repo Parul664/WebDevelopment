@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Buttons </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+    
+    
+ <body>
+     <div class="container-fluid">
+         
+<!--         Three ways of making a button-->
+
+<!--         Way 1-->
+         <a class="btn btn-link btn-lg" href = "#">Top of the page</a>
+         
+<!--         Way 2 : Best way-->
+         <button class = "btn btn-default" type = "submit"> Reset</button>
+         
+<!--         Way 3-->
+         <input class = "btn btn-info btn-sm active" type="button" value="Cancel">
+         
+         <input class = "btn btn-success btn-xs disabled" type="button" value="Submit">
+         
+<!--         Creating Button groups-->
+         <br />  <br />  <br />
+         <div class = "btn-group btn-group-lg" role="group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+         
+         </div>
+         
+         <br /><br />
+<!--         Creating a button Toolbar with 3 groups of buttons-->
+         
+         <div class = "btn-toolbar" role="toolbar">
+         
+             <div class = "btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+         
+            </div>
+             
+             <div class = "btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+
+             </div>
+             
+             <div class = "btn-group btn-group-lg btn-group-vertical" role="group">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+
+             </div>             
+         
+         </div>
+         
+<!--             making buttons occupying the whole width-->
+         
+        <div class = "btn-group btn-group-justified" role="group">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">Left</button>
+            </div>
+            <div class="btn-group">
+                 <button type="button" class="btn btn-default">Middle</button>
+            </div>
+            
+           <div class="btn-group">
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            
+         
+         </div>
+         
+     </div>
+
+     
+     <script    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+     <script src="js/bootstrap.min.js"> </script>
+     
+ </body>
+</html>
+
+<!--
+Sometimes we want the buttons to act as links.
+Making the buttons act as a link
+    1. btn-link
+    2. btn-primary
+    3. active - for the button to be active all the time
+    4. btn-group - a class for group of buttons
+    5. btn-toolbar - a class for creating a toolbar of buttons.
+    6. btn-group-vertical - to create a vertical group of buttons.
+-->

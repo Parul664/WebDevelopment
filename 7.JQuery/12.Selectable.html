@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Selectable</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: auto;
+            width : auto;
+            color : white;
+            padding : 10px;
+            
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: auto;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }li{
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+/*        Styling the items on being selected and afte r being selected*/
+        #list .ui-selecting{
+            background: purple;
+            
+        }#list .ui-selected{
+            background: hotpink;
+            color : white;
+            
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox ui-corner-all" id = apple>
+        <ul id = list>
+            <li class = "ui-state-default">aaa</li>
+            <li class = "ui-state-default">bbb</li>
+            <li class = "ui-state-default">ccc</li>
+        </ul>
+    </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+//       Items can be selected either endividuallu or in groups
+        $("#list").selectable({
+            stop:function(){
+                $(".ui-selected").each(function(){
+                    $("<p></p>").text($(this).text()).appendTo("#microsoft");
+                })
+            }
+        });
+//        Stop: once the selcting activity is done, we what we do
+//        ui-selected is the class of the elements selected. And we want to run a function for each of them
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+

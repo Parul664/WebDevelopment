@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Date Pickers</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+   
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook>
+    <p>Flight departure Dates<input id = departure></p>    
+    <p>Flight return Dates<input id = return></p>    
+    </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>    
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        
+        $("#return").datepicker({
+            dateFormat: "d M, y"
+        });
+        
+        $("#departure").datepicker({
+            showAnim : "slideDown",
+            changeYear: true,
+            numberOfMonths: 1,
+            dateFormat: "d M, y",
+            showOn : "button",
+            buttonText: "Choose your Departure Dates",
+            minDate: +1,
+            maxDate : "+12M +10D",
+            onClose: function(selectedDate){                            $("#return").datepicker("option","minDate",selectedDate);                
+            },
+            showWeek: true
+                                   
+        });
+//        showAnim : Animates the appearing disappearing of the calender, other options are fadeIn, drop
+//        If you are in 2017 and want to go to 2020 you need not go all the way scaolling, we can have a drop down for the year as well. using changeYear
+//        Show a couple of months
+//        Month/day/year dateFormat : "mm/dd/yy"(default)
+//        If we use m/dd/yy then well see month as 3 instead of 03 
+/*
+        M for capital Month name like Mar, Jun, Jul
+        MM March , June, July
+        D Mon, Tue
+*/
+//        If you want to add image to button, then buttonImage:"url" or image not inside a box using buttonImageOnly:true
+//        buttonText is shown when we hover over the button in case you have an image inside it, else it will be written on the button itself.
+//        minDate : +1 means its todays date+1
+ 
+        
+        
+        
+        
+        
+    })
+        
+    </script>
+        
+    </body>
+    
+
+
+</html>
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Button Widgets</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class="bluebox ui-corner-all" id="facebook">
+    <div id="checkboxes">
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">aaa</label>
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">bbb</label>
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">ccc</label>
+    </div>
+        
+    <form>
+    <div id ="radioBoxes">
+        <input type = radio id = "radioBox1" name="radioBoxes"> 
+        <label for=radioBox1>ddd</label>
+        <input type = radio id = "radioBox2" name="radioBoxes"> 
+        <label for=radioBox2>eee</label>
+        <input type = radio id = "radioBox3" name="radioBoxes"> 
+        <label for=radioBox3>fff</label>
+        
+        
+        
+    </div>    
+        
+    </form>    
+    
+ </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple>
+    <input type = checkbox id = mycheckbox>
+    <label for= "mycheckbox">CheckBox</label>
+    </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p >Microsoft</p>    
+    </div>
+
+    <button id=button1> Button1</button>
+    <button id=button2> Button2</button>
+    <button id=button3> Button3</button>
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#button1").button();
+        $("#button2").button({
+            icons:{
+                primary: "ui-icon-folder-open"
+            },
+            text:false
+        });
+//        Primary icon is the one that goes on the left
+//        Seconday icon is the one that goes to the right
+//    Text = false means no icon shows on the button
+        
+        $("#button3").button({
+            icons:{
+                primary:"ui-icon-mail-closed",
+                secondary:"ui-icon-carat-1-e"
+            }
+        });
+        
+        $("#mycheckbox").button();
+        $("#checkboxes").buttonset();
+//        This is to style all the checkboxes
+        
+        $("#radioBoxes").buttonset();
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+<!--Button Widgets allow us to themable buttons that come with pre-built active and hover styles-->
+<!--Theme can be changed in the link-->

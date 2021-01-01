@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>
+ Events
+ </title>
+ <style>
+     .bluebox{
+     background-color: #3A5795;
+     color: white;
+     height: auto;
+     width:auto;
+     }
+     .yellowbox{
+     background-color: rgb(222, 224, 85);
+     height: auto;
+     width: auto;
+     }
+     .greenbox{
+     background-color: #31af37;
+     height: auto;
+     width: auto;
+     }
+     #great{
+     background-color: #5a3479;
+
+     }
+ </style>
+     <script src = "js/jquery.js"></script>
+ </head>
+
+ <body>
+     
+    <div class="bluebox">
+        <p> Facebook is <span id="great">great</span> </p>
+        <p class = "orange">Paragraph2</p>
+        <p>Paragraph 3</p>
+    </div>
+     
+    <div class="yellowbox"><p>Apple.</p>
+        
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>        
+        </ul>
+        
+        <p><a href="http://www.google.com">This is the first link</a></p>
+        <p><a href="http://www.google.com">This is the second link</a></p>
+    </div>
+     
+     <p> Sibling of div</p>
+    <div class="greenbox">
+        <p> Microsoft. </p>
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>        
+        </ul>
+        
+<!--        A simple table-->
+        <table>
+        <tr><th>Phone Make </th><th>Model</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        
+        </table>
+        
+        <p>Type your name: <input id = input><button type = "submit" id = "submit">submit</button></p>
+        
+    </div>
+     
+ <script>
+     
+    $(document).ready(function(){
+//        $("p").click(function(){
+//            $("p").css("background-color",'pink');
+//            $(this).css("background-color",'pink');
+//            
+//        });
+        
+        $("p").mouseover(function(){
+            $(this).css("background-color","lightgreen");
+        })
+        $("p").mouseout(function(){
+            $(this).css("background-color","");
+        })
+        
+        //focus and leave
+        $("input").focus(function(){
+            $(this).css("background-color","brown");
+        })
+        $("input").blur(function(){
+            $(this).css("background-color","white");
+        })
+        
+        // we want to change the css of the input, while typing. This event is called key-up(when we press and leave a key)
+        
+        $("input").keyup(function(){
+            $(this).css("background-color","yellow");
+        })
+        
+        // On submit, the value inside the input to clear
+        $("#submit").click(function(){
+            $("#input").css("background-color",'white');
+            $("#input").val(""); 
+        })
+    }
+    );
+ 
+</script>
+ </body>
+
+
+</html>
+
+<!--moto:
+Click on any paragraph and at the click time I am going to change the color of all paragraphs.
+
+this -> the element that we have clicked.
+
+mouseout-is when you remove the hover, in this case it is bringing the background-color to the original color, the one that it was pre-defined.
+
+:input selects the submit, button and all.
+"input" is like the other selectors
+-->

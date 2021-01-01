@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+ <html>
+<head>
+    <meta charset="utf-8">
+    <title>Arrays</title>
+        
+</head>
+<body>
+    <p id = "myParagraph"> Javascript</p>
+    
+
+    <script>
+    
+        var ShoppingList = ["bread", "eggs", "milk"];
+        
+//        Arrays are a type of objects. There is also a constructor to create arrays.
+        var ShoppingList2 = new Array("bread","eggs","milk");
+        
+//        Shows all elements separated by commas
+        showResult(ShoppingList);
+        
+//         Display one item of the array
+//         0, 1, 2, 3, ...
+        showResult(ShoppingList[1])
+        
+        function showResult(x){                                                         document.getElementById("myParagraph").innerHTML += "<br /> "+x;
+        }
+        
+        //change second item value
+        ShoppingList[1] = "anda";
+        showResult(ShoppingList);
+        
+        delete ShoppingList[1];
+        showResult(ShoppingList);
+        // bread,,milk Value is deleted but this space is still there.
+        
+        //So deleteing it completely using
+        ShoppingList[1] = "anda";
+        showResult(ShoppingList);
+        // Parameter - Index to start deleting, Number of items
+        ShoppingList.splice(1,1);
+        showResult(ShoppingList);
+        
+//        Inserting items
+        ShoppingList.splice(1,0,"banana","apple");
+        showResult(ShoppingList);
+        
+//        Sorting the array
+        ShoppingList.sort();
+        showResult(ShoppingList);
+        ShoppingList.reverse();
+        showResult(ShoppingList);
+        
+//        Creating array from a string
+        var myString = "abcde";
+        var myArray1 = myString.split();
+//        Right now returns just one item
+        showResult(myArray1);
+//        Split at each letter
+        var myArray2 = myString.split('');
+        showResult(myArray2);
+        
+//        Second parameter to the split can be the maximum number of elements that can be there inside the element
+        
+    </script>
+    
+</body>
+
+</html>

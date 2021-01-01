@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQuery UI</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: auto;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>
+    <label for = myinput>Enter a value:</label>
+    <input id = myinput name=myinput value = 30 title="Please Enter a value!">
+    
+        
+    </p>
+    </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple>
+        <ul>
+            <li><a href = "#tab1">tab1</a></li>    
+            <li><a href = "#tab2">tab 2</a></li>    
+            <li><a href = "#tab3">tab 3</a></li>    
+
+        </ul>
+        <div id = tab1> <p> COntent 1</p></div>
+        <div id = tab2> <p> COntent 2</p></div>
+        <div id = tab3> <p> COntent 3</p></div>
+        
+        
+        
+    </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#myinput").spinner({
+            min:0,
+            max:100,
+            step: 3
+        });
+        
+        $("#apple").tabs({
+            collapsible: true,
+            event:"mouseover"
+        });
+        // See the content of a mouse over
+        // collapsible meaning we can close them
+        
+        $("#apple").tabs().find(".ui-tabs-nav").sortable({
+            axis:"x"
+        });
+        
+        // Tooltip means showing somthings on the hover over the element. tooltip shows what is there in the title
+        $("#myinput").tooltip({
+            show:{
+                effect:"explode"
+            }
+        });
+        // other options are there like slideDown    
+    /*
+    $(document).tooltip();
+    All the elements having a title will now have a title
+    */
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+

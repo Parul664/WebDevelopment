@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> StopWatch App </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="4.styling.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+    
+</head>
+    
+    
+ <body>
+     
+<!--     Title-->
+     <div class="container-fluid">
+        <div id="header">Stop Watch</div>
+     
+
+     
+<!--     Lap Time-->
+     <div id="lap">
+        <span id="lapminute">00</span>:
+        <span id="lapsecond">00</span>:
+        <span id="lapcentisecond">00</span>     
+     </div>
+     
+<!--     Time-->
+     <div id="time">
+        <span id="timeminute">00</span>:
+        <span id="timesecond">00</span>:
+        <span id="timecentisecond">00</span>
+     </div>
+
+     <div class="row" id="controlsContainer">
+         
+<!--         First three Buttons-->
+        <div class="col-xs-2 col-xs-offset-4">
+             <div id="startButton" class="control">
+                 Start
+             </div>
+            <div id="resumeButton" class="control">
+                 Resume
+             </div>
+            <div id="stopButton" class="control">
+                 Stop
+             </div>
+        </div>
+         
+<!--         Second three buttons-->
+         <div class="col-xs-2">
+             <div id="lapButton" class="control">
+                 Lap
+             </div>
+            <div id="resetButton" class="control">
+                 Reset
+             </div>
+            
+        </div>
+     
+     </div>
+     
+<!--     lapse box-->
+     <div id="lapse">
+         
+     </div>
+     
+     </div>
+     
+     
+     <script    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+     <script src="js/bootstrap.min.js"> </script>
+     
+     <script src="4.jquery.js"></script>
+     
+ </body>
+</html>
+

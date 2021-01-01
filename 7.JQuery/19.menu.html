@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Menu</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : auto;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: auto;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+        }
+        .ui-menu{
+            width : 100px;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><ul id = continents>
+        <li>Asia
+            <ul>
+            <li>France</li>
+            <li>UK</li>
+            <li>India
+                <ul>
+                <li>Panchula</li>    
+                <li>Jaipur</li>    
+                <li>Helloween</li>    
+                <li>punajb</li> 
+            </ul>    
+                
+            </li>
+            
+            <li>Spain</li>
+
+
+            </ul>
+        
+        </li>
+        
+        <li>Africa</li>
+        <li>America</li>
+        <li>Australia</li>
+        <li>Austria</li>
+        
+    </ul>   
+    
+        
+    </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple>
+    <ul id = continents2>
+        <li>Asia
+            <ul>
+            <li>France</li>
+            <li>UK</li>
+            <li>India
+                <ul>
+                <li>Panchula</li>    
+                <li>Jaipur</li>    
+                <li>Helloween</li>    
+                <li>punajb</li> 
+            </ul>    
+                
+            </li>
+            
+            <li>Spain</li>
+
+
+            </ul>
+        
+        </li>
+        
+        <li>Africa</li>
+        <li>America</li>
+        <li>Australia</li>
+        <li>Austria</li>
+        
+    </ul>    
+        
+    </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#continents").menu();
+        $("#continents2").menu();
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+<!--You can use the UI widget header, to highlight some of the li by giving the li's a class ui-widget-header -->
+
+

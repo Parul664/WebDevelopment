@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+ <html>
+<head>
+    <meta charset="utf-8">
+    <title>REGEX</title>
+        
+</head>
+<body>
+    <p id = "myParagraph"> Javascript </p>
+    
+    <script>
+        // Regex are used to look for patterns in user inputs. They are usually used to validate user inputs. 
+        // Checking there is atleast one digit.
+        
+        
+        var str = "Alanta";
+        var pattern = /a/i; // pattern i->case insensitive
+        window.alert(str.search(pattern)); // position of the first occurance.
+        // /a/g    g -> global search
+        
+        window.alert(str.match(pattern));
+        // Returns first instance of the search
+        // if g used in search - It returns all the instances. as a list.
+        
+        window.alert(pattern.test(str));
+        // returns a boolean -whether it exists or not
+      
+        
+    </script>
+    
+</body>
+
+</html>
+
+<!--Another way-->
+<!--val pattern = /[a-z]/g;-->
+<!--val pattern = /[^atm]/g-->
+<!--the above one means anything that is not in these characters-->
+<!--See if there is any digit-->
+<!--val pattern = /\d/g-->
+<!--val pattern = /\w/g   for aphanumeric characters-->
+<!--val pattern = /\W/g   for non-aphanumeric characters like %-->
+<!--val pattern = /\s/g   for spaces-->
+<!--val pattern = /\d(4)/g   we are looking for 4 instances of digits.-->
+<!--val pattern = /^a/g   if it has a at the beginning-->
+<!--val pattern = /\n/g   for a newline character checking-->

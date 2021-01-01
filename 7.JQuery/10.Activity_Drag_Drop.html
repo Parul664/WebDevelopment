@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Activity-Drag and Drop</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+        #droppable{
+            background-color: #b513eb;
+            height: 300px;
+            width : auto ;
+            margin-top: 20px;
+            color: white;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+    
+    
+<!--    buttons-->
+    <button id = button1> Button1</button>
+    <button id = button2> Button2</button>
+
+        
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox ui-corner-all" id = apple> <ul id = list>
+    <li>eggs </li><li>milk</li> <li>egg</li>   
+    </ul></div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+        
+    <div id = droppable class="ui-corner-all"><p>You can drop things here!</p></div>
+
+ 
+        
+    
+       
+    <script>
+        
+    var message = ["Please!","Leave me along","Drop me!","Come on!"];
+       
+    $(document).ready(function(){
+        
+        // This draggable function is a part of JQuery UI, so we need to include those above line from Google CDN for it to work
+        $("#facebook").draggable();
+        $("#apple").draggable({axis:"y"});
+        
+        $("#microsoft").draggable({
+            revert:true,
+            start:function(){
+               $("#facebook").css("background-color","pink");                       
+            },
+            drag:function(){
+                $("#microsoft").css('background-color', 'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')');
+                $("#microsoft").find("p").html(message[Math.floor(Math.random()*4)]);
+            },
+            stop:function(){
+                $("#apple").css("background-color","orange");
+                $("#microsoft").html("<p>Finally</p>");
+            }
+        });
+
+        
+    $("#droppable").droppable({
+        drop: function(event, ui){
+            $(this).css("background-color",'lightgreen');
+            $(this).find("p").remove();
+            $("<div></div>").text(ui.draggable.text()).appendTo(this);
+        },
+        accept: "#list li"
+        
+    });         
+    // getting the text of the element.ui.draggable.text()
+        // Put it into p tags
+        //Now append it to the droppable elemnt
+    // But every time we put a new element, the earlier ones get removed. So we put the elements inside the div tages so that they donot get removed when we put a new paragraph
+        
+        
+    $("#list").find("li").draggable({
+        helper:"clone",
+        appendTo:"body"
+    });
+      
+    // We are cloning this element and appending it to the body. If we set it to p then well append it to all the paragraphs of the document
+    
+        
+        
+    })
+        
+    </script>
+        
+        
+    </body>
+
+</html>
+
+
+

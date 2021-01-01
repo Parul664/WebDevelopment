@@ -1,0 +1,138 @@
+.mainContainer{
+    display: flex;
+/*    background-color: bisque;*/
+    justify-content: center;
+    align-items: center;
+    height : 100vh;
+    
+}
+
+
+.container{
+    background-color: lightblue;
+    border-radius: 10px;
+/*    display: */
+}
+
+#score{
+    background-color: lightcoral;
+    float : right;
+    padding : 10px 7px;
+    margin : 10px;
+    border-bottom: 5px solid black;
+    
+}
+
+#wrong{
+    position: relative;
+    left : 400px;
+    top : 20px;
+}
+
+.container2{
+/*    background-color: pink;*/
+    display: grid;
+    grid-template-rows: 3fr 1fr 2fr;
+    align-items: center;
+    width : 400px;
+    margin : 0px 60px;
+    
+}
+
+.question{
+    background-color: burlywood;
+    text-align: center;
+    height :100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 10px 0px;
+    border-bottom: 5px solid black;
+    
+}
+
+#figures{
+    font-size: 90px;
+    font-family: sans-serif;
+}
+
+.options{
+/*    background-color :aquamarine;*/
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+#option1, #option2, #option3, #option4{
+    flex : 1;
+    max-width : 20%;
+    background-color: crimson;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+    border-radius: 5px;
+    
+
+}
+
+#op1, #op2, #op3, #op4{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: crimson;
+}
+
+.instruction{
+    background-color: purple;
+    padding : 10px 10px;
+    text-align: center;
+    border-bottom: 5px solid black;
+    margin : 5px 0px;
+}
+
+.startstop{
+    display: flex;
+    margin : 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.startstop button{
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+}
+
+#time{
+    width: 160px;
+    position: relative;
+    left: +335px;
+    top : -47px;
+    background-color: rgba(181, 235, 36, 0.8);
+}
+
+.clear{
+    clear: both;
+}
+
+#endMsg{
+    box-sizing: border-box;
+    position : absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size : 30px;
+    
+}
+
+#button2{
+    padding: 0;
+    border : 0;
+    font-size : 30px;
+    border-style: groove;    
+}

@@ -1,0 +1,104 @@
+/*Style Body by adding the background image and set it to cover, adding the font-family*/
+body{
+    font-family: Arvo, serif;
+    
+    background: url(images/picture.jpg) no-repeat center center;
+    background-size: cover;
+/*    Picture stretched to fit the full width, and height is automatically adjusted to keep the same aspect ratio and hence the image is not centered.*/
+    background-attachment: fixed;
+    
+}
+
+
+/*Style the brand image*/
+.logo{
+    height:30px;
+}
+
+/*Style navigation bars*/
+.navbar-inverse{
+    background: rgba(0,0,0,0.5);
+}
+
+.nav li{
+    color:white;
+    font-size: 17px;
+    margin-right: 35px;
+    padding: 10px;
+}
+
+.nav li:hover{
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgba(255,255,200,0.4);
+    cursor: pointer;
+}
+
+/*Styling jumbotron*/
+.jumbotron{
+    background-color: transparent;
+/*    background: none;*/
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+/*    Removing the by-default margin and padding*/
+    letter-spacing: 2.5px;
+    
+}
+
+/*limit the width of the icon sections*/
+.container{
+    max-width: 1000px;
+}
+
+/*Style icon section using bootstrap grid system*/
+.bodyimage{
+    height: 190px;
+    color: white;
+}
+
+.col-md-4{
+    text-align: center;
+}
+
+.icons{
+    font-size: 15px;
+}
+
+/*Style the contact button*/
+.contact{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.btn{
+    background-color: rgba(255,255,200,0.4);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 10px 70px;
+    letter-spacing: 1.3px;
+    margin-bottom: 100px;
+    
+}
+
+.btn:hover{
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border:none;
+}
+
+/*Style the footer*/
+.footer{
+    color:grey;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px 0px;
+}
+
+/*use media queries to change size of icons in small devices*/
+@media(max-width:768px){
+    .bodyimage{
+        height: 110px;
+    }
+}

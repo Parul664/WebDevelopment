@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Draggable</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+        #droppable{
+            background-color: #b513eb;
+            height: 300px;
+            width : auto ;
+            margin-top: 20px;
+            color: white;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+    
+    
+<!--    buttons-->
+    <button id = button1> Button1</button>
+    <button id = button2> Button2</button>
+
+        
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+        
+    <div id = droppable class="ui-corner-all">You can drop things here!</div>
+
+ 
+        
+    
+       
+    <script>
+        
+    var message = ["Please!","Leave me along","Drop me!","Come on!"];
+       
+    $(document).ready(function(){
+        
+        // This draggable function is a part of JQuery UI, so we need to include those above line from Google CDN for it to work
+        $("#facebook").draggable();
+        $("#apple").draggable({axis:"y"});
+        
+//        The element microsoft goes back to where it was when we leave it after dragging using revert
+        $("#microsoft").draggable({
+            revert:true,
+            start:function(){
+               $("#facebook").css("background-color","pink");                       
+            },
+            drag:function(){
+                $("#microsoft").css('background-color', 'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')');
+                $("#microsoft").find("p").html(message[Math.floor(Math.random()*4)]);
+            },
+            stop:function(){
+                $("#apple").css("background-color","orange");
+                $("#microsoft").html("<p>Finally</p>");
+            }
+        });
+//        The start function is executed when we start dragging, drag function while we are dragging, and stop function when we stop dragging.
+//        The parameter drag is contineuosly exectued when the element is being dragged.
+        
+    $("#droppable").droppable({
+        drop: function(){
+            $(this).css("background-color",'lightgreen');
+        },
+        accept: "#facebook"
+        
+    }); 
+        
+    // We can only drop the facebook div here, coz accept only accepts the facebook div
+    // When the element is dropped the function in the drop takes place.
+        
+        
+    })
+        
+    </script>
+        
+        
+    </body>
+
+</html>
+
+<!--an element is dropable if we are able to drag another element and drop it inside the element-->
+

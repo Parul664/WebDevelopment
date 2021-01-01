@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+ <html>
+<head>
+    <meta charset="utf-8">
+    <title>For Loops</title>
+    
+    <style>
+        #div1{
+            background-color: blue;
+        }#div2{
+            background-color: yellow;
+        }
+        #div3{
+            background-color: green;
+        }#div4{
+            background-color: pink;
+        }
+        .equalbox{
+            float:left;
+        }
+    
+    </style>
+        
+</head>
+<body>
+    
+    <div id = "div1" class = "equalbox"> Div1</div>
+    <div id = "div2" class = "equalbox"> Div2</div>
+    <div id = "div3" class = "equalbox"> Div3</div>
+    <div id = "div4" class = "equalbox"> Div4</div>
+    
+    <script>
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        // whole width of the screen, not just browser
+        var screenWidth = window.screen.width;
+        
+        //Available is not same actual height like in case we have task bar
+        var availableScreenHeight = window.screen.availHeight;
+        
+        
+        // Make divs sit side by side. to occupy quarter of the page.
+        for(i = 1; i< 5 ; i++){
+            
+            document.getElementById("div"+i).style.width = window.innerWidth/4 - 10 + 'px';
+            document.getElementById("div"+i).style.height = window.innerHeight - 10 + 'px';
+        }
+        
+        ////////////////////////////////////////////////
+        // Alert boxes to get yes/no
+        var acceptCookies = window.confirm("Please tell whether you accept cookies");
+        
+        // acceptCookies is a boolean variable that tells whether user pressed yes or not
+        if(acceptCookies == true){
+            window.alert("You accept cookies");
+        }else{
+            window.alert("You dont accept cookies");
+        }
+        
+        // Alert Boxes to get values from the user.
+        var visitor = prompt("Please enter your name");
+        window.alert("Hi "+ visitor+", we wish you a nice experience on our page! Please don't forget to like us on facebook!")
+    </script>
+    
+</body>
+
+</html>

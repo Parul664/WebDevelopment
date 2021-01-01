@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sliders</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+            margin-bottom: 30px;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        #slidervalue, #mileageRange{
+            color:blue;
+            border: 0;
+            font-weight:bold;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook</p>
+    </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    </div>
+
+<!--        Sliders with one movable thing-->
+    <div id = slider></div>
+    <label for = slider> Value :</label>
+    <input type="text" id = sliderValue readonly>
+<!--     This input will be readonly-->
+        
+        
+<!--        Sliders for selecting a range-->
+    <div id = rangeSlider></div>
+    <label for = rangeSlider> Mileage :</label>
+    <input type="text" id = mileageRange readonly>
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#slider").slider({
+            slide:function(event,ui){
+                $("#sliderValue").val(ui.value);
+            },
+            min:0,
+            max:25
+        });
+        $("#sliderValue").val(0);
+        
+        // by default min value is 0 and max value is 100
+        
+        $("#rangeSlider").slider({
+            range:true,
+            min:0,
+            max:100000,
+            values: [0,10000],
+            slide:function(event,ui){
+                $("#mileageRange").val(ui.values[0]+" miles - "+ui.values[1]+" miles");
+            },
+            step:1000
+        });
+        // step means we are increasing and decreasing by 1000 every step
+        
+         $("#mileageRange").val($("#rangeSlider").slider("values",0)+" miles - "+$("#rangeSlider").slider("values",1)+" miles");
+        
+        /*
+        $("#rangeSlider").slider("values",0) this is used to access the current value of the slider. Values is the paramter used for it and since values is an array, we use the 0 th index for that
+        
+        */
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+

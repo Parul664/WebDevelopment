@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Floating</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+            float: left;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+            float:right;
+            
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+/*            If this is not used then the Microsoft one will come and sit in between the Facebook and Apple Div. This will now allow anything to come to the right and to the left of the Microsoft Div.*/
+            clear:both;
+           
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+    
+    <p>Divisions are used for grouping a bunch of paragraphs together.</p>
+    <p>Float allows only horizontal movement, w.r.t. whatever we move. They can't float vertically.</p>
+        
+    <div class = "bluebox">
+    <p>Facebook<br /> It is <span class = "great">great</span></p>        
+    </div>
+        
+    <div class = "yellowbox">
+    <p>Apple</p>        
+    </div>
+        
+    <div class = "greenbox">        
+    <p>Microsoft</p>        
+    </div>
+    
+    </body>
+
+
+
+
+</html>

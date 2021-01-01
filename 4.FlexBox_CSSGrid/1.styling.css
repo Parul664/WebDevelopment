@@ -1,0 +1,36 @@
+/*Selecting all the elements */
+* {
+/*    Size of any box now includes padding and border*/
+    box-sizing: border-box;
+}
+
+.container{
+    background-color : #07575B;
+    height : 300px;
+    margin : 10px;
+    display: flex;
+/*    Displays them in an inline way, and the divs take up the full height. They take only width as much as required unless you specify it explicitely.*/
+    flex-wrap: wrap;
+/*    flwex-wrap : wrap-reverse*/
+/*    Last Row is treated as the first row.*/
+/*    Height of the container does not change because it is set explicitely, while the height of the divs change accordingly to fit the div. They'll stretch to the full height of container.*/
+    
+    flex-direction: column;
+}
+
+/*Flex creates the number of columns or rows as required.*/
+
+/*Styling all divs inside the container*/
+.container > div {
+    background-color: #66a5AD;
+    color : aliceblue;
+    text-align: center;
+    padding : 20px;
+    margin:1px;
+    border : 3px #C4DFE6 solid;
+/*    float : left;*/
+}
+
+/*We want them to be floating side by side*/
+/*Then if you make the window smaller then the elements will keep coming one under the other, but there will be some extra space there. We can use flaxbox to properly make boxes occupy full width, and no space is left out.*/
+

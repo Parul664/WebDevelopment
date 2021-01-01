@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Positioning</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1;
+        }
+        
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+            position: relative;
+            left: 20px;
+            left: 20px;
+            z-index: 0;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+    
+    
+    
+    <div class = "bluebox">
+    <p>Facebook 1</p>        
+    </div>
+        
+    <div class = "yellowbox">
+    <p>Apple 2</p>        
+    </div>
+        
+    <div class = "greenbox">        
+    <p>Microsoft 3</p>        
+    </div>
+    
+        
+    <p>position is fixed means all the elements are ignoring that fixed element in the regular flow of the webpage.</p>
+    <p>relative means that the element is places relative to its position of the webpage. Other elements still believe that it is at the same place. It also preserve its position on the webpage.</p>
+    <p> absolute means we are placing it wrt to the first static element. But in our case there is none so it is doing relative.</p>
+    <p>To decide which element comes in the top of which element we can use z-index property.</p>
+    <p>elements with higher z-index will show up on the top. The element will be on the top which have z-index rather than pople who have no z-index.</p>
+    <p>Here top means sabse peeche.</p>
+      
+        
+    <p> NOTE :
+    Elements will show on the tpp of their z-value os positive. If an element is not given a z-value, then it will inherit from its parent, and by default the parent's z-value is 0.
+    In our example elements with no-specified z-value have then a z-index of 0 and element with a positive z-index will show on the top of them.
+    </p>
+    </body>
+
+
+
+
+</html>

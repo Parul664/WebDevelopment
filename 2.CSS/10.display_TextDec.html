@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title> display and Text Decoration</title>
+    
+<style>
+    .bluebox{
+        background-color: aquamarine;
+        color : palevioletred;
+        height : 100px;
+        width : auto;  
+/*        Preserve the space taken by the Div but don't show it.*/
+/*        visibility: hidden;*/
+/*        Dont preserve the space and also don't show it.*/
+/*        display : none;*/
+    }
+    .yellowbox{
+        background-color: pink;
+        height : 100px;
+        width : auto;
+/*        Text decoration*/
+        text-decoration : overline;
+        font-style : italic;
+        font-size : 1.5em;
+/*        1em = 16 pixels*/
+    }
+    .greenbox{
+        background-color: skyblue;
+        height : 100px;
+        width : auto;
+/*        Space between letters */
+        letter-spacing: 10px;
+/*        horizontal shadow Vertical Shadow  blurr radius(Optional) Color*/
+        text-shadow : 3px 3px 3px grey;
+        text-indent: 50px;
+    }
+    .great{
+        background-color: #5a3479;
+/*        used to show the inline element as a block element. It remains an inline element, just that it is shown as in block element*/
+        display: block;
+    }
+    
+</style>
+    
+</head>
+
+<p>
+
+  Display can be used to show the inline elements as block elements. 
+  Same can be done for block elements if you want to  show them as inline elements.
+</p>    
+
+<body>
+<div class = "bluebox">
+<p> Amazon is <span class = "great"> greatest</span> I just love it.</p>    
+    
+</div>    
+    
+<div class = "yellowbox">
+<p> Google</p>
+</div>
+    
+<div class = "greenbox">
+    
+<p> Microsoft</p>
+</div>
+    
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Autocomplete</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+        }
+        .ui-autocomplete{
+            max-height: 200px;
+            overflow-y : auto;
+/*            To avoid overflow out of the box
+            if hidden you won't be ab;e tos ee them*/
+            max-width: 200px;
+            overflow-x: auto;
+            
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook</p>
+    <p>Input your city : <input id = "city"></p>    
+    </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#city").autocomplete({
+            source:["Londooooooooooooooon","Paris","Toronto","Manhattan","Bhatinda","Manali","Helloween","ParulCity"]
+        });
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+

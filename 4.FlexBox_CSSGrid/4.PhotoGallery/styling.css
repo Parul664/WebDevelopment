@@ -1,0 +1,44 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+/*Convert the container to a flex box*/
+.container{
+    display: flex;
+    flex-wrap : wrap;
+}
+
+.column:nth-child(1){
+    background-color: aquamarine;
+
+}
+
+.column:nth-child(2){
+    background-color: blueviolet;
+}
+
+.column:nth-child(3){
+    background-color: coral;
+
+}
+
+.column:nth-child(4){
+    background-color: dimgray;
+}
+
+.column{
+    flex : 1;
+    min-width: 300px;
+/*    flex-basis: 300px;*/
+/*    Either of the above 2 statements will work.*/
+}
+
+img{
+    width : 100%;
+/*    Follow whatever we gave to your container. Otherwise the images flow out of the container. Otherwise images will start to overlap.*/
+}
+
+/*Setting flex-grow will ensure they take up the entire width*/
+/*If we do nowrap here then all the elements have to fit in the same row, Since we cannot wrap them in the same row.*/
+

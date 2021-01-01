@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title> Text Effects</title>
+    
+<style>
+    .bluebox{
+        background-color: aquamarine;
+        color : palevioletred;
+        height : 100px;
+        width : auto;  
+/*        hides the extra text*/
+        overflow: hidden;
+/*        does not wrap the text in the box*/
+        white-space: nowrap;
+/*        If the text is hidden then it shows ... these 3 dots instead of cutting the word.*/
+        text-overflow:ellipsis;
+        
+        
+    }
+    
+    .yellowbox{
+        background-color: pink;
+        height : 100px;
+        width : auto;
+        font-size : 1.5em;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        
+    }
+/*    Now when you hover over the text you wil see the full text.*/
+    .yellowbox:hover{
+        overflow: visible;
+    }
+    .greenbox{
+        background-color: skyblue;
+        height : 100px;
+        width : 400px;
+        font-size: 1.1em;
+        font-family: Sans-serif;
+/*        Breaks a long word in case it is appearing*/
+/*        word-break: break-all;*/
+/*        wrap the word, and if it still overflows then break it*/
+        word-wrap: break-word;
+/*        Just that it does not overflow*/
+        overflow: hidden;
+
+    }
+
+</style>
+    
+</head>    
+
+<body>
+    
+<p> We Add some effects to the text. Like what if it overflows the div.</p>
+    
+<div class = "bluebox">
+<p> Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. Amazon is the best and it is just the best and hence no further discussions on it. </p>    
+    
+</div>    
+    
+<div class = "yellowbox">
+<p> Google is the second best. Google is the second best. Google is the second best. Google is the second best. Google is the second best. Google is the second best. Google is the second best. Google is the second best. Google is the second best. Google is the second best. </p>
+</div>
+    
+<div class = "greenbox">
+    
+<p> Microsoft is also good. Microsoft is also gooooooooooooooooooooooooood. Microsoft is also good. Microsoft is also good. Microsoft is also good. Microsoft is also good. Microsoft is also gooooooooooooooooooooooooooooooooooooooooood. Microsoft is also good.</p>
+</div>
+    
+</body>
+
+</html>

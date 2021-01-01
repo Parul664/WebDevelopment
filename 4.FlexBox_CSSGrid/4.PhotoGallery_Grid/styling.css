@@ -1,0 +1,48 @@
+/*PHOTO GALLERY 1*/
+
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: grid;
+/*    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));*/
+    grid-gap: 5px;
+/*Padding to the complate container and not to the individual container.*/
+    padding: 7px;
+    
+/*    Pictures are alogned in the center*/
+    align-items : center;
+}
+
+/*So that they completly fit in the container*/
+.container > img{
+    max-width: 100%;
+}
+
+/*We didn't had to use the media queries also to adjust the size.*/
+
+
+/* PHOTO GALLERY 2*/
+/*This is another way of making the grid library. so whatever I write now will over-write the aboove part and so remove this lower part in case u want to see the above project working. Basically a different form of grid.*/
+
+.container{
+    display: grid;
+/*    We have four columns, even when we reduce the width.*/
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap : 5px;
+    
+}
+
+.container > img {
+    max-width: 100%;
+}
+
+.container > img:nth-child(6){
+/*    This should occupy 2 cells horizontally and 2 cells vertically*/
+    grid-column: span 2;
+    grid-row : span 2;
+}

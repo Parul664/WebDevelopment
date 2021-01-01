@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Accordion</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : uato;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+
+    
+    </head>
+    
+    
+    <body>
+    <div id = resizer class = "ui-widget-content">   
+    <div class = "bluebox ui-corner-all" id = facebook>
+        <h3>Section 1</h3>
+        <div>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            
+        </div>
+        <h3>Section 2</h3>
+        <div>Content2</div>
+        <h3>Section 3</h3>
+        <div>Content3</div>
+    </div>
+    </div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+       $("#facebook").accordion({
+           collapsible: true,
+           icons: {
+               header: "ui-icon-circle-arrow-e",
+               activeHeader:"ui-icon-circle-arrow-s",
+           },
+           heightStyle:"fill"
+       });
+//        If we expand a section they can't be collpased. So to avoid this we use 'collapsible:true'
+//        By default we'll have the arrow icons left to the header, we can change it in the way given above. This class name can be found on the same site.
+//        It is by-default the class name and hence we donot need to use a '.'
+//        All the sections use the height of the largest one, we can avoid this using heightStyle:"content"
+//        content:fill is used so that it fits the container, when container is reziable
+        $("#resizer").resizable({
+            resize:function(){
+                $("#facebook").accordion("refresh");
+            }
+        });
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+<!--Accordian is a set of document sections.Each section containing a header and some content inside a div. They can be expaded and contracted as per need. 
+Accordian must be inside a div.
+-->

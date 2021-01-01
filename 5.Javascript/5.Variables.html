@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Variables and Datatypes</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+    
+    <p>Divisions are used for grouping a bunch of paragraphs together.</p>
+        
+    <div class = "bluebox" id = "facebook">
+    <p>Facebook</p>        
+    </div>
+        
+    <div class = "yellowbox" id = "apple">
+    <p>Apple</p>        
+    </div>
+        
+    <div class = "greenbox">        
+    <p>Microsoft</p>        
+    </div>
+        
+        
+    <button id = "button1">Change Facebook Style</button>
+    <button id = "button2">Change Apple Style</button>
+    
+        
+    <script>
+        var x = 3; // Assigning and Declaring
+        window.console.log(x); //press F12
+        var y;
+        y = 5;
+        var z;
+        // window.console.log("The value of z is " + z); // undefined
+        z = x + y;
+        window.console.log(z); //3 + 5 = 8
+        z = x + " " + y;
+        window.console.log(z); // 3 5
+        
+        var greeting = "Hello";
+        var firstname = "Parul";
+        var message = greeting + " " + firstname;
+        window.console.log("The value stored in variable message is : " + message);
+        var check = (x==3); 
+        window.console.log("The value of check is " + check);
+        window.console.log(typeof(check));
+        
+        var myArray = [1,2,3,4,5];
+        window.console.log(myArray);
+        // Type of an array comes as a object and not array
+        
+        
+    </script>
+    
+    </body>
+
+
+
+
+</html>

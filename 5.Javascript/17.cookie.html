@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+ <html>
+<head>
+    <meta charset="utf-8">
+    <title>For Loops</title>
+        
+</head>
+<body>
+    <p id = "myParagraph"></p>
+    
+    <script>
+      
+//        We are adding these attributes to the cookie
+        document.cookie = "username = Parul";
+        document.cookie = "age = 33";
+        document.cookie = "country = India";
+        
+        window.alert(document.cookie);
+        
+        var cookie = document.cookie.split(';');
+        window.alert(cookie); //comma separated
+        
+        for(i = 0; i<cookie.length; i++){
+            document.getElementById("myParagraph").innerHTML += "<br />" + cookie[i];
+        }
+        
+        // Now if you remove this code and try to print cookie, they'll be still there
+//        window.alert(document.cookie);
+        
+        
+    </script>
+    
+</body>
+
+</html>

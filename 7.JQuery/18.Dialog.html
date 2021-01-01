@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dialog</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook</p></div>
+        
+    <div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>  
+    </div>
+
+    <div id = mydailog title="This is a dailog box">
+    <p> Welcome to our page</p>   
+    </div>
+        
+    <div id = confirmation title="Leave the page?">
+        <span class = "ui-icon ui-icon-alert" style="float:left"></span>
+    <p> Are you sure you want to leave the page?</p>   
+    </div>
+        
+        
+    <button id = open>Open Dailog</button>
+    <button id = closepage>Move to previous page</button>
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#mydailog").dialog({
+            autoOpen:false
+        });
+//        Title given to div appears in the dialogs title
+//        autoOpen means the dailog won't show up automatically
+        $("#open").click(function(){
+            $("#mydailog").dialog("open");
+        })
+        
+        $("button").button();
+        $("#confirmation").dialog({
+            autoOpen:false,
+            modal : true,
+            buttons:{
+                "go to prev page": function(){
+                    window.history.back();
+                },
+                Cancel : function(){
+                    $(this).dialog("close");
+                }
+            }
+        });
+//        modal:true required for confirmation dialogs
+//        buttons are used to add buttons inside the confirmation things, mention the button text and the corresponding function that it has to perform.
+        
+        $("#closepage").click(function(){
+            $("#confirmation").dialog("open");
+        })
+        
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+

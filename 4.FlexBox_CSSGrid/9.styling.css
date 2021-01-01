@@ -1,0 +1,56 @@
+/*A single item occupies more than one block in the grid.*/
+
+.container > div {
+    background-color: #66a5AD;
+    color : aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding : 5px;
+/*    margin : 2px;*/
+}
+
+.container{
+    height : 100vh;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-columns: 20% 1fr 20%;
+    grid-gap: 5px;
+    padding : 7px;
+    grid-template-areas: 
+        "apple apple apple"
+        "facebook microsoft samsung"
+        "google google google"
+}
+
+.apple{
+    grid-area: apple;
+}
+.mircosoft{
+    grid-area: microsoft;
+}
+.google{
+    grid-area: google;
+}
+.facebook{
+    grid-area: facebook;
+}
+.samsung{
+    grid-area: samsung;
+}
+
+@media all and (max-width: 700px){
+    .container{
+        grid-template-areas: 
+            "facebook"
+            "apple"
+            "microsoft"
+            "samsung"
+            "google";
+        grid-template-rows: 50px 100px 1fr 100px 50px;
+        grid-template-columns: 1fr;
+        
+    }
+    }
+}
+

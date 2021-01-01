@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Styling Links</title>
+    <style>
+/*        General for all links */
+        a:link{
+            color :crimson
+        }
+        a:hover {
+            font-size: 2em;
+        }
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+/*        When the link is active for instance when you click on the link and hold the key for some time, then these effects wil occur.*/
+        div.bluebox a:active{
+            font-size: 4em   
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+/*        If you try to change the font size of the link after it has been visited, it does't work. So bear this in mind that, there are some limitations to the properties that you can change, of the visited link.(In chrome.)*/
+        div.yellowbox a:visited{
+            color : darkorange
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+
+        
+    <div class = "bluebox">
+    <p>Facebook</p>
+    <p> 
+    <a href = "http://www.amazon.com"> Amazon</a>
+    </p>
+    </div>
+        
+    <div class = "yellowbox">
+    <p>Apple</p> 
+    <p><a href = "http://www.ebay.com"> ebay</a>
+        </p>
+    </div>
+        
+    <div class = "greenbox">        
+    <p>Microsoft</p>  
+    <p>
+    <a href = "http://www.amazon.jobs.com">Microsoft</a>
+        </p>
+    </div>
+    
+        
+    <p>
+    blue and underlined till they haven't been clicked. And after it has been visited the link turn purple. These are the by default things.   
+    </p>
+    </body>
+
+
+
+
+</html>

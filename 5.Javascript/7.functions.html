@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>functions</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+    
+    <p>Divisions are used for grouping a bunch of paragraphs together.</p>
+        
+    <div class = "bluebox" id = "facebook">
+    <p>Facebook</p>        
+    </div>
+        
+    <div class = "yellowbox" id = "apple">
+    <p>Apple</p>        
+    </div>
+        
+    <div class = "greenbox" id = "microsoft">        
+    <p>Microsoft</p>        
+    </div>
+        
+        
+    <button id = "button1">Swap content of Facebook1 and Apple2</button>
+    <button id = "button2">Swap content of Microsoft3 and Apple2.</button>
+    
+        
+    <script>
+      
+        
+    function greeting1(){
+        window.alert("Hello!");
+    }
+//    greeting1();
+        
+    function greeting2(firstname){
+        window.alert("Hello " + firstname );
+    }
+        
+//    greeting2("Parul");
+        
+    function sum (a, b){
+        return a+b;
+    }
+//    greeting2(sum(3,7));
+    
+        
+//    function to take as parameter 2 id's and swap the contents
+    function swap(id1, id2){
+        var content1 = document.getElementById(id1).innerHTML;
+        var content2 = document.getElementById(id2).innerHTML;
+        document.getElementById(id2).innerHTML = content1;
+        document.getElementById(id1).innerHTML = content2;
+    }
+        
+    document.getElementById('button1').onclick = function(){
+        swap('facebook','apple');
+    };
+    document.getElementById('button2').onclick = function(){
+        swap('microsoft','apple');
+    };
+    
+        
+    </script>
+    
+    </body>
+
+
+
+
+</html>

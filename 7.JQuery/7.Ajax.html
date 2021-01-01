@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ajax</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+    
+    </style>
+    <script src = "js/jquery.js"></script>
+    
+    </head>
+    
+    
+    <body>
+    
+    
+<!--    buttons-->
+    <button id = button1> Button1</button>
+    <button id = button2> Button2</button>
+
+        
+    <div class = "bluebox" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox sans" id = apple><p>Apple</p> </div>
+        
+    <div class = "greenbox" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+        
+    <p>Enter your name: <input></p>
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        
+//        Load the whole file
+        $("#facebook").load("ajax/data.txt");
+//        If you want to load some part of it. done using id
+        $("#apple").load("ajax/data.txt #para1");
+        
+        
+        //Method 1 : using Ajax
+        $("#button1").click(function(){
+            
+//            Load the data using url and then on success perform the following function. The file content stored in data.
+            $.ajax({ url : "ajax/data.txt", success: function(data){
+                $("#microsoft").html(data);
+            }
+                
+            });
+        });
+        
+        // Method 2 using ajax
+        $("#button2").click(function(){
+            
+            $.ajax({ url : "ajax/data.txt"}).done(function(data){
+                $("#microsoft").html(data);
+            });
+        })
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+<!--Ajax - Asynchronous and Javascript and XML
+used to exchange data between websites and server.
+Change paths of the webpage, without having to re-load the page everytime and giving user a better experience.
+
+Here, JQuery to build Ajax code.
+Load is an ajax function
+-->

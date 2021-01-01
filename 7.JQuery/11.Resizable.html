@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Resizable</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: 100px;
+            width : auto;
+            color : white;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }
+        #container{
+            width : 300px;
+            height : 300px;
+            border-style : dotted;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+    
+    <div id = container><div class = "yellowbox sans ui-corner-all" id = apple><p>Apple</p> </div></div>
+    
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p>    
+    </div>
+
+ 
+        
+    <script>
+       
+    $(function(){
+       $("#facebook").resizable({
+           maxHeight:200,
+           minHeight:50,
+           minWidth:100,
+           maxWidth:300,
+           aspectRatio: 4/3,
+           ghost:true,
+           alsoResize: "#microsoft" 
+       });
+//        No need to put px
+//        If we want to keep the aspectRatio always the same
+//        The effect of resizing will now be seen as a ghost. And actual resizing seen after you have left the cursor.
+//        If we resize the microsoft div then also resize the facebook div
+        
+        
+//        REsizing based on the size of the containing container.
+//        Add some animation using animate
+        $("#apple").resizable({
+            containment: "#container",
+            animate: true
+        });
+        
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+
+

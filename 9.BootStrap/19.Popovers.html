@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> PopOvers </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+    
+    
+ <body>
+     <div class="container-fluid">
+         <button type="button" class="btn btn-primary" data-toggle="popover" data-content="<h2>This is a popover just like that the one you see on an IPad</h2>" data-trigger="hover">button</button>
+         
+     </div>
+
+     
+     <script    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+     <script src="js/bootstrap.min.js"> </script>
+     
+     <script>
+         
+//         Popover appears on the mouse click
+     $('[data-toggle="popover"]').popover({
+         html:true,
+         delay:{"show":1000, "hide":1000}
+     });
+         
+//         We can change it to hover also by adding attr in button
+         
+    $('[data-toggle="popover"]').on('hidden.bs.popover', function(){
+        window.alert("Popover gone!");
+    })
+         
+     </script>
+     
+ </body>
+</html>
+
+
+<!--Pop overs are like tooltips, just that they can have more text and even html content inside them-->

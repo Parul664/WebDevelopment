@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sortable</title>
+    <style>
+        .bluebox{
+            background-color : blue;
+            color : white;
+            height : 100px;
+            width : auto;
+        }
+        .yellowbox{
+            background-color: rgb(222,224,85);
+            height: auto;
+            width : auto;
+            color : white;
+            padding : 10px;
+            
+        }
+        .greenbox{
+            background-color: aquamarine;
+            height: auto;
+            width : auto;
+            color : white;
+            padding: 10px;
+        }
+        .great{
+            background-color: beige;
+            color:black;
+        }
+        .sans{
+            font-family: sans-serif;
+        }
+        p{
+            margin : 0;
+/*            To make the animation smooth*/
+        }li{
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+/*        Styling the items on being selected and afte r being selected*/
+        #list .ui-selecting{
+            background: purple;
+            
+        }#list .ui-selected{
+            background: hotpink;
+            color : white;
+            
+        }
+        .connectedList{
+            border: 1px solid white;
+            min-height: 20px;
+        }
+    
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+ </script>
+ <link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/blitzer/jquery-ui.css" />
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+ </script>
+
+    
+    </head>
+    
+    
+    <body>
+       
+    <div class = "bluebox ui-corner-all" id = facebook><p>Facebook<br /> It is <span class = "great">great</span></p></div>
+        
+    <div class = "yellowbox ui-corner-all" id = apple>
+        <ul id = list class = connectedList>
+            <li class = "ui-state-default">aaa</li>
+            <li class = "ui-state-default">bbb</li>
+            <li class = "notSortable ui-state-default">ccc</li>
+        </ul>
+    </div>
+        
+    <div class = "greenbox ui-corner-all" id = microsoft><p id = mp>Microsoft</p>
+    <p><a href = "http://www.microsoft.com" id = linkk title="microsoft">This is a link</a></p> 
+        <ul id = list2 class = connectedList>
+            <li class = "ui-state-default">ddd</li>
+            <li class = "ui-state-default">eee</li>
+            <li class = "notSortable ui-state-default">fff</li>
+        </ul>
+    </div>
+
+ 
+        
+    <script>
+       
+    $(document).ready(function(){
+        $("#list").sortable({
+            placeholder: "ui-state-highlight",
+            cancel: ".notSortable"
+        });
+        
+//        Place holder - U'll see an outline of where the element will be dropped. ui-state-error is also there.
+//         In some caseses there are options that you dont want to be sortable
+    
+        $("#list2").sortable();
+        
+//        To allow interchange between the two lists we need a common class that we'll have given to both lists. Here it is connectedList
+        $("#list, #list2").sortable({
+            connectWith: ".connectedList"
+        })
+        
+//        If one list is emptied by moving all the elements to the other list, then when you try to move the items back, u won't be able to because your list has now shrinked. All you need to do to avoid this to put a minimum height on the list as a whole. So that it does not shrink to a minimum height
+    })
+        
+    </script>
+        
+    </body>
+
+</html>
+

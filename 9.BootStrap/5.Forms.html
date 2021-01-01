@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Forms </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+    
+    
+ <body>
+     
+     This is an important one, covers so much for a topic, till now I should say this one was the heaviest.
+     
+     <div class="container-fluid">
+         
+         Form 1
+         
+         <form class="form-inline">
+<!--             Below 768px it will appear one over the other. And after that it will display inline-->
+         
+            <div class = "form-group">
+                <label for ="email">E-mail : </label>
+                <input type="email" id ="email" placeholder="E-mail" class="form-control">
+            </div>
+             
+            <div class = form-group>
+                <label for ="password">Password : </label>
+                <input type = "password" id = password placeholder="Password" class="form-control">
+                 
+            </div>
+             <button type="submit" class="btn btn-default">Login</button>
+                  
+         </form>
+         <br />
+         <hr> Form 2<br /><hr>
+         
+         <form class="form-horizontal">
+         
+            <div class = "form-group">
+                <label for ="email" class = "col-sm-2 control-label">E-mail : </label>
+                <div class ="col-sm-10">
+                    <input type="email" id ="email" placeholder="E-mail" class="form-control">
+                
+                </div>
+            </div>
+             
+            <div class = form-group>
+                <label for ="password" class = "col-sm-2 control-label">Password : </label>
+                <div class = "col-sm-10">
+                    <input type = "password" id = password placeholder="Password" class="form-control">
+                
+                </div>
+                 
+            </div>
+             <div class = "col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Login</button>
+             </div>
+<!--             Jump 2 field and then occupy 10-->
+             
+                           
+             <hr> Text Areas<br/><hr>
+             
+             <label for="comments">Comments</label>
+            <textarea class = "form-control" rows="5" id = comments>
+            </textarea>
+             
+             <hr> Check Boxes<br/><hr>
+             
+             <div class="checkbox">
+                <label>  <input type = "checkbox" value = "value1" id = "checkbox1">CheckBox 1</label>
+            </div>
+             
+             <div class="checkbox disabled">
+                <label>  <input type = "checkbox" value = "value2" id = "checkbox2">CheckBox 2</label>
+            </div>
+             
+             <hr> Radio Buttons<br/><hr>
+             
+             
+             <div class = "radio radio-inline">
+                <label><input type = "radio" name = "radios" id ="radio1" value = "option1"> Radio Option 1</label>
+             </div>
+             
+             <div class = "radio radio-inline">
+                <label><input type = "radio" name = "radios" id ="radio2" value = "option2"> Radio Option 2</label>
+             </div>
+             
+             <div class = "radio radio-inline">
+                <label><input type = "radio" name = "radios" id ="radio3" value = "option3"> Radio Option 3</label>
+             </div>
+             
+             <hr> Select<br/><hr>
+             <select multiple class="form-control">
+                <option>Option 1 </option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+             
+             </select>
+<!--             The multiple keyword helps us to select multiple options-->
+             
+             <hr> Radio Buttons<br/><hr>
+             <input type="text" class = form-control placeholder = "Text-Input" disabled>
+             
+<!--             Disabled keywords disables the thing-->
+             
+             
+             <hr> <h3>Forms 3 - Adding some validation styles.</h3><br/><hr>
+             
+             <div class ="row">
+             
+                 <div class = "form-group has-success col-xs-2">
+                    <label for= "textinput1" class ="sr-only">Text Input 1</label>
+                    <input type = "text" class = "form-control" id = textinput1 placeholder="Text Input 1">
+
+                 </div>
+                 <div class = "form-group has-error col-xs-6">
+
+                    <label for= "textinput2" class ="sr-only">Text Input 2</label>
+                    <input type = "text" class = "form-control input-lg" id = textinput2 placeholder="Text Input 2">
+                 </div>
+
+                 <div class ="form-group has-warning col-xs-4">
+
+                     <label for= "textinput3" class ="sr-only">Text Input 3</label>
+                     <input type = "text" class = "form-control input-sm" id = textinput3 placeholder="Text Input 3">
+                 </div>
+             
+             </div>
+             
+             <br /><hr> Some more styling <br /> <hr>
+             
+             <div class ="form-group has-feedback has-warning">
+
+                 <label for= "textinput3" class ="sr-only">Text Input</label>
+                 <input type = "text" class = "form-control input-sm" id = textinput4 placeholder="Text Input 4">
+                 <span class = "glyphicon glyphicon-alert form-control-feedback"></span>
+                 <span class=sr-only> warning</span>
+<!--                 Not useful here but it is used for assistive technologies.-->
+             </div>
+             
+             <br /><hr> Addons <br /> <hr>
+             
+             <div class ="input-group has-feedback has-success">
+
+                 <label for= "textinput3" class ="sr-only">Text Input</label>
+                 <span class = "input-group-addon">@</span>
+                 <input type = "text" class = "form-control input-sm" id = textinput4 placeholder="Text Input 4">
+                 <span class = "glyphicon glyphicon-ok form-control-feedback"></span>
+                 <span class=sr-only> warning</span>
+
+             </div>
+             
+             <br /><hr> Attaching a button <br /> <hr>
+             
+             <div class ="input-group has-feedback has-success">
+
+                 <label for= "textinput3" class ="sr-only">Text Input</label>
+                 <span class = "input-group-btn"><button class = "btn btn-defult" type="button">Submit</button></span>
+                 <input type = "text" class = "form-control input-sm" id = textinput4 placeholder="Text Input 4">
+                 <span class = "glyphicon glyphicon-ok form-control-feedback"></span>
+                 <span class=sr-only> warning</span>
+
+             </div>
+             
+             This is it for forms. It had been so long!. OMG
+             
+        </form>
+         
+         
+     </div>
+
+     
+     <script    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+     <script src="js/bootstrap.min.js"> </script>
+     
+ </body>
+</html>
+
+<!--Usually the label and the input are put in the class form-group (in a separate div with a class form-group )to provide some up and down padding.-->
+
+<!--To use the grid system provided by the Bootstrap the input and the button must be put inside a  separte class to use those functionalities.-->
+
+<!--form-horizontal class means that the input field will be next to the label field-->
+<!--form-control is the basic styling of the box-->
+
+<!--Checkboxes-->
+<!--1. disabled disables the checkbox
+    2. checkbox class gives basic formatting.
+-->
+
+<!--inputs
+    1. sr-only the labels will disappear
+-->
+
+<!--To add an icon to the right of the input we can go to the bootstrap wensite an then under the components section, there are a lot of such signs
+    1. has-feedback needs to be added to get the image
+    2. form-control-feedback should there in a span with the image from the website's components.
+-->
+
+<!--If there are multiple addons in the input  field as well then we'll have to use the class input-group
+    1. input-group-addon will then add the test to the front of the input field.
+    2. We can add button also by placing it inside a span. and giving it a class input-group-btn
+-->

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>
+ Select html elements
+ </title>
+ <style>
+     .bluebox{
+     background-color: #3A5795;
+     color: white;
+     height: auto;
+     width:auto;
+     }
+     .yellowbox{
+     background-color: rgb(222, 224, 85);
+     height: auto;
+     width: auto;
+     }
+     .greenbox{
+     background-color: #31af37;
+     height: auto;
+     width: auto;
+     }
+     #great{
+     background-color: #5a3479;
+
+     }
+ </style>
+     <script src = "js/jquery.js"></script>
+ </head>
+
+ <body>
+     
+    <div class="bluebox">
+        <p> Facebook is <span id="great">great</span> </p>
+        <p class = "orange">Paragraph2</p>
+        <p>Paragraph 3</p>
+    </div>
+     
+    <div class="yellowbox"><p>Apple.</p>
+        
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>        
+        </ul>
+        
+        <p><a href="http://www.google.com">This is the first link</a></p>
+        <p><a href="http://www.google.com">This is the second link</a></p>
+    </div>
+     
+     <p> Sibling of div</p>
+    <div class="greenbox">
+        <p> Microsoft. </p>
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>        
+        </ul>
+        
+<!--        A simple table-->
+        <table>
+        <tr><th>Phone Make </th><th>Model</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        <tr><th>Apple</th><th>Iphone 4 16GB</th></tr>
+        
+        </table>
+        
+        <p>Type your name: <input><button type = "submit">submit</button></p>
+        
+    </div>
+     
+ <script>
+     
+ $(document).ready(function(){
+//        $("*").css("font-size", '16px');
+     // selecting all the elements
+     
+     // selecting all the direct children of div
+//        $("div > p").css("text-align",'center');
+     //Aligning all the siblings of the div
+//        $("div ~ p").css("text-align",'center');
+     
+     //Aligning all the decendent of divs
+    $("div  p").css("text-align",'center');
+    $("#great").css("background-color",'green');
+    $(".orange").css("background-color",'orange');
+     
+     // All the divs of class blackbox
+     $("div.bluebox").css("font-family",'sans-serif');
+     
+//     All the paragraphs that are the first child of the div are mentioned here.
+     $("p:first-child").css("text-decoration",'underline');
+//     $("p:last-child").css("text-decoration",'underline');
+     
+//     Combining both
+//     $("p:first-child, p:last-child",'underline');
+     
+//     All those that have an href attribute.
+     $("[href]").css("color",'red');
+     
+     $("li:first-child").css("background-color",'pink');
+     
+//     All even rows are coloured
+     $("tr:even").css("background-color",'orange');
+     
+//     All inputs of the page. A little different
+     $(":input").css("background-color",'lightblue');
+     $(":Submit").css("background-color",'lightgreen');
+ 
+//     select every div that has a table
+     $("div:has(table)").css("background-color","skyblue");
+}
+ );
+ </script>
+ </body>
+
+
+</html>
